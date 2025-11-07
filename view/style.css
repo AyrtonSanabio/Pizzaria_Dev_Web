@@ -4,12 +4,29 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.5;
+    background-color: #fff3e6; /* bege claro */
+}
+
+header section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #c94c3d; /* vermelho tomate */
+    display: inline;
 }
 
 /* MENU */
 .menu {
-    background-color: rgb(65, 65, 124); /* Azul escuro */
-    padding: 10px 0;
+    display: flex;
+    padding: 20px 0;
+    border: 1px solid #c94c3d; /* vermelho tomate */
+    justify-content: flex-end;
+    background-color: #f9d6b0; /* laranja/bege */
 }
 
 .menu ul {
@@ -22,16 +39,17 @@ body {
 }
 
 .menu ul li a {
-    color: white;
+    color: #c94c3d; /* vermelho tomate */
     text-decoration: none;
     font-weight: bold;
 }
 
 /* INTRODUÇÃO */
 .introducao {
-    background-color: green;
+    background-color: #e74c3c; /* vermelho pizza */
     text-align: center;
     padding: 30px 10px;
+    color: #fffbe6; /* creme claro */
 }
 
 .introducao img {
@@ -40,129 +58,149 @@ body {
     margin-top: 15px;
 }
 
-/* CARDÁPIO */
-.cardapio {
-    background-color: yellow;
-    padding: 20px 10px;
+.lista_icones{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
+    padding: 5px;
 }
 
-.cardapio article {
-    flex: 0 0 30%;
-    background-color: white;
+.icone{
+    width: 70px;
+    height: 70px;
+    border-radius: 25%;
+    border: 1px solid #c94c3d;
+}
+
+
+
+.cardapio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.cardapio div {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #c94c3d;
     border-radius: 10px;
-    overflow: hidden;
+    background-color: #fffbe6;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 10px;
-    text-align: center;
+    height: 150px; /* mesma altura da imagem */
+    overflow: hidden;
 }
 
-.cardapio article img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+.cardapio div img.icone {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 15px;
 }
 
-.cardapio article h3 {
-    margin: 10px 0 5px;
+.cardapio div .texto-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    overflow: hidden;
 }
 
-.cardapio article p {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.cardapio article a {
-    text-decoration: none;
-    color: blue;
-    font-weight: bold;
-}
-
-/* CARDS DE ELOGIOS */
-.cards_elogios { 
-    display: flex; 
-    flex-wrap: wrap; /* Permite quebrar para a próxima linha */ 
-    justify-content: center; /* Centraliza os cards na linha */ 
-    gap: 20px; /* Espaço entre os cards */ 
-    max-width: 1000px; /* Largura máxima do container */ 
-    margin: 0 auto; /* Centraliza o container horizontalmente */ 
-    background-color: purple; 
-    padding: 10px; 
-} 
-.cards_elogios div { 
-    flex: 0 0 30%; /* Cada card ocupa cerca de 30% da linha */ 
-    height: 300px; 
-    border: 1px solid #ccc; 
-    border-radius: 10px; 
-    overflow: hidden; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-    transition: transform 0.2s;
-    background-color: white; 
-    padding: 5px; }
-
-.cards_elogios div h2 {
+.cardapio div .texto-card h2 {
+    margin: 0 0 5px 0;
     font-size: 16px;
-    margin-bottom: 10px;
+    white-space: nowrap; /* não quebra linha */
+    overflow: hidden;
+    text-overflow: ellipsis; /* corta se nome for longo */
 }
 
-.cards_elogios div p {
+.cardapio div .texto-card p {
+    margin: 0;
     font-size: 14px;
-    margin-bottom: 5px;
+    line-height: 1.2em;
+    overflow: hidden;
+    display: block;
+    flex-grow: 1; /* ocupa o restante da altura do card sem ultrapassar a imagem */
 }
+
+
+
+
+
+
+
+
 
 /* FORMULÁRIO */
 .menu_dados {
-    background-color: red;
+    background-color: #e74c3c; /* vermelho pizza */
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-around;
+}
+
+.pizza_form{
+    width: 700px;
+    height: 500px;
+    border: 1px solid #c94c3d; /* vermelho tomate */
 }
 
 .menu_dados h2 {
-    color: white;
+    color: #fffbe6; /* creme */
     margin-bottom: 15px;
 }
 
 .menu_dados form {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 15px;
+    justify-content: center;
+    border: 1px solid #c94c3d; /* vermelho tomate */
+    padding: 20px;
 }
 
 .menu_dados label {
     font-weight: bold;
-    color: white;
+    color: #fffbe6; /* creme */
 }
 
 .menu_dados input,
 .menu_dados select,
 .menu_dados option,
 .menu_dados textarea {
-    background-color: blue;
-    color: white;
+    background-color: rgba(249, 214, 176, 0.7); /* bege/translúcido */
+    color: #5a1f0b; /* marrom escuro */
     border: none;
     border-radius: 5px;
     padding: 5px;
-    width: 250px;
+    width: 400px;
+}
+
+.menu_dados textarea{
+    height: 160px;
 }
 
 .menu_dados button {
-    background-color: white;
-    color: red;
+    background-color: #c94c3d; /* vermelho tomate */
+    color: #fffbe6; /* creme */
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
+    width: 400px;
 }
 
 /* RODAPÉ */
 footer {
-    background-color: #f2f2f2;
+    background-color: #f9d6b0; /* laranja/bege */
     padding: 20px;
     display: flex;
     justify-content: space-around;
@@ -171,6 +209,10 @@ footer {
 
 footer div {
     margin: 10px;
+    flex-direction: row;
+    border: 5px solid #c94c3d; /* vermelho tomate */
+    padding: 10px;
+    width: 100%;
 }
 
 footer img {
@@ -178,9 +220,14 @@ footer img {
     height: auto;
 }
 
+footer p, h4{
+    border: 1px solid #c94c3d; /* vermelho tomate */
+}
+
 footer a {
     display: block;
-    color: black;
+    color: #c94c3d; /* vermelho tomate */
     text-decoration: none;
     margin-bottom: 5px;
+    border: 1px solid #c94c3d; /* vermelho tomate */
 }
