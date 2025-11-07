@@ -1,0 +1,186 @@
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/* MENU */
+.menu {
+    background-color: rgb(65, 65, 124); /* Azul escuro */
+    padding: 10px 0;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* INTRODUÇÃO */
+.introducao {
+    background-color: green;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.introducao img {
+    max-width: 90%;
+    height: auto;
+    margin-top: 15px;
+}
+
+/* CARDÁPIO */
+.cardapio {
+    background-color: yellow;
+    padding: 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cardapio article {
+    flex: 0 0 30%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+.cardapio article img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cardapio article h3 {
+    margin: 10px 0 5px;
+}
+
+.cardapio article p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.cardapio article a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+/* CARDS DE ELOGIOS */
+.cards_elogios { 
+    display: flex; 
+    flex-wrap: wrap; /* Permite quebrar para a próxima linha */ 
+    justify-content: center; /* Centraliza os cards na linha */ 
+    gap: 20px; /* Espaço entre os cards */ 
+    max-width: 1000px; /* Largura máxima do container */ 
+    margin: 0 auto; /* Centraliza o container horizontalmente */ 
+    background-color: purple; 
+    padding: 10px; 
+} 
+.cards_elogios div { 
+    flex: 0 0 30%; /* Cada card ocupa cerca de 30% da linha */ 
+    height: 300px; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    transition: transform 0.2s;
+    background-color: white; 
+    padding: 5px; }
+
+.cards_elogios div h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.cards_elogios div p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* FORMULÁRIO */
+.menu_dados {
+    background-color: red;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu_dados h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.menu_dados form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu_dados label {
+    font-weight: bold;
+    color: white;
+}
+
+.menu_dados input,
+.menu_dados select,
+.menu_dados option,
+.menu_dados textarea {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 250px;
+}
+
+.menu_dados button {
+    background-color: white;
+    color: red;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer div {
+    margin: 10px;
+}
+
+footer img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
