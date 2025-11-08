@@ -16,6 +16,7 @@ body {
     background-color: rgba(244, 233, 216, 0.9);
 }
 
+
 header section{
     display: flex;
     align-items: center;
@@ -23,8 +24,8 @@ header section{
 }
 
 .logo{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     display: inline;
 }
 
@@ -125,14 +126,56 @@ header section{
     justify-content: center;
     gap: 50px;
     padding: 5px;
+    flex-wrap: wrap;
+    margin: 12px 0px;
 }
 
 .icone{
-    width: 70px;
-    height: 70px;
+    width: 42.5px;
+    height: 42.5px;
     border-radius: 25%;
 }
 
+.icone_inf{
+    width: 35px;
+    height: 35px;
+    margin-right: 12px;
+    border-radius: 25%;
+}
+
+
+.linha-cardapio {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.33;
+    position: relative;
+    
+}
+
+.linha-cardapio::before,
+.linha-cardapio::after {
+    content: "";
+    flex: 1;
+    border-top: 2px solid #000;
+}
+
+.linha-cardapio::before {
+    margin-right: 10px;
+}
+
+.linha-cardapio::after {
+    margin-left: 10px;
+}
+
+.linha-cardapio span{
+    display: flex;
+    align-items: center;
+}
 
 
 .cardapio {
@@ -303,3 +346,5 @@ footer a {
     text-decoration: none;
     margin-bottom: 5px;
 }
+
+
