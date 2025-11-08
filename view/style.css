@@ -1,10 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
 /* BODY */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.5;
-    background-color: #fff3e6; /* bege claro */
+    background-color: rgba(249, 214, 176, 0.7); /* bege/translúcido */
 }
 
 header section{
@@ -16,17 +25,45 @@ header section{
 .logo{
     width: 200px;
     height: 200px;
-    border: 1px solid #c94c3d; /* vermelho tomate */
     display: inline;
 }
 
-/* MENU */
 .menu {
     display: flex;
+    column-gap: 48px;
+    list-style: none;
     padding: 20px 0;
-    border: 1px solid #c94c3d; /* vermelho tomate */
     justify-content: flex-end;
-    background-color: #f9d6b0; /* laranja/bege */
+    align-items: center;
+}
+
+.menu_link{
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.menu_link::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+
+    width: 60%;
+    height: 1px;
+    background: #c94c3d;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s;
+}
+
+.menu_link:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.4s; 
 }
 
 .menu ul {
@@ -38,18 +75,43 @@ header section{
     padding: 0;
 }
 
-.menu ul li a {
-    color: #c94c3d; /* vermelho tomate */
-    text-decoration: none;
-    font-weight: bold;
+
+.menu a{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: .3s;
+}
+
+.menu a:hover, .menu a.active{
+    color: #c94c3d;
+    text-transform: uppercase;
 }
 
 /* INTRODUÇÃO */
 .introducao {
-    background-color: #e74c3c; /* vermelho pizza */
     text-align: center;
     padding: 30px 10px;
-    color: #fffbe6; /* creme claro */
+    color: #c94c3d;
+    font-size: 16px;
+    margin: 25px 0 30px;
+    line-height: 1.2;
+}
+
+.introducao h2{
+    font-size: 45px;
+    line-height: 1.2;
+    background: linear-gradient(#59ffff, #1952ab);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.paragrafo_introducao{
+    width: 50%;
+    margin: auto;
+    font-size: 16px;
+    color: #c94c3d
 }
 
 .introducao img {
@@ -69,7 +131,6 @@ header section{
     width: 70px;
     height: 70px;
     border-radius: 25%;
-    border: 1px solid #c94c3d;
 }
 
 
@@ -86,7 +147,6 @@ header section{
 .cardapio div {
     display: flex;
     flex-direction: row;
-    border: 1px solid #c94c3d;
     border-radius: 10px;
     background-color: #fffbe6;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -96,8 +156,8 @@ header section{
 }
 
 .cardapio div img.icone {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     margin-right: 15px;
 }
@@ -126,14 +186,6 @@ header section{
     display: block;
     flex-grow: 1; /* ocupa o restante da altura do card sem ultrapassar a imagem */
 }
-
-
-
-
-
-
-
-
 
 /* FORMULÁRIO */
 .menu_dados {
@@ -178,9 +230,17 @@ header section{
     background-color: rgba(249, 214, 176, 0.7); /* bege/translúcido */
     color: #5a1f0b; /* marrom escuro */
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     padding: 5px;
     width: 400px;
+    font-size: 16px;
+    padding: 10px 22px 10px 10px;
+    border: none;
+    outline: none;
+}
+
+.menu_dados input::placeholder{
+    color: white;
 }
 
 .menu_dados textarea{
@@ -188,17 +248,26 @@ header section{
 }
 
 .menu_dados button {
-    background-color: #c94c3d; /* vermelho tomate */
-    color: #fffbe6; /* creme */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
+    border: 2px solid #42c1e8;
+    padding: 10px 28px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
+    letter-spacing: 1px;
     width: 400px;
+    background: transparent;
+    color: #42c1e8;
+    transition: .5s;
 }
 
-/* RODAPÉ */
+
+.menu_dados button:hover{
+    background: #42c1e8;
+    color: #01003f;
+}
+
+
 footer {
     background-color: #f9d6b0; /* laranja/bege */
     padding: 20px;
@@ -210,7 +279,6 @@ footer {
 footer div {
     margin: 10px;
     flex-direction: row;
-    border: 5px solid #c94c3d; /* vermelho tomate */
     padding: 10px;
     width: 100%;
 }
@@ -220,14 +288,10 @@ footer img {
     height: auto;
 }
 
-footer p, h4{
-    border: 1px solid #c94c3d; /* vermelho tomate */
-}
 
 footer a {
     display: block;
     color: #c94c3d; /* vermelho tomate */
     text-decoration: none;
     margin-bottom: 5px;
-    border: 1px solid #c94c3d; /* vermelho tomate */
 }
