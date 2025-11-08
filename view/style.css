@@ -13,14 +13,21 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.5;
-    background-color: rgba(244, 233, 216, 0.9);
+    background-color: #fff;
 }
 
+hr {
+    width: 100%;
+    max-width: 1200px; 
+    border: none;
+    border-top: 2px solid #DB3623;
+    margin: 30px auto; /* centraliza */
+}
 
 header section{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .logo{
@@ -54,7 +61,7 @@ header section{
 
     width: 60%;
     height: 1px;
-    background: #7e8c11;
+    background: #DB3623;
 
     transform: scaleX(0);
     transform-origin: right;
@@ -86,7 +93,7 @@ header section{
 }
 
 .menu a:hover, .menu a.active{
-    color: #7E8C11;
+    color: #DB3623;
     text-transform: uppercase;
 }
 
@@ -103,16 +110,17 @@ header section{
 .introducao h2{
     font-size: 45px;
     line-height: 1.2;
-    background: linear-gradient(#7E8C11, rgb(85, 82, 82));
+    background: linear-gradient(#DB3623, #da2410);
     -webkit-background-clip: text;
     color: transparent;
+    margin-bottom: 64px;
 }
 
 .paragrafo_introducao{
-    width: 50%;
+    width: 60%;
     margin: auto;
-    font-size: 16px;
-    color: #7E8C11
+    font-size: 24px;
+    color: #DB3623
 }
 
 .introducao img {
@@ -137,8 +145,8 @@ header section{
 }
 
 .icone_inf{
-    width: 35px;
-    height: 35px;
+    width: 42.5px;
+    height: 42.5px;
     margin-right: 12px;
     border-radius: 25%;
 }
@@ -146,30 +154,37 @@ header section{
 
 .linha-cardapio {
     display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    margin: 32px auto;
     font-size: 32px;
     font-weight: bold;
     line-height: 1.33;
     position: relative;
+    max-width: 1200px; 
+    width: 100%; 
     
+}
+
+.linha-cardapio p{
+    color: #DB3623;
 }
 
 .linha-cardapio::before,
 .linha-cardapio::after {
     content: "";
-    flex: 1;
-    border-top: 2px solid #000;
+    flex: 1; /* agora cresce junto com o container */
+    height: 2px;
+    border-top: 2px solid #DB3623;
 }
 
 .linha-cardapio::before {
-    margin-right: 10px;
+    margin-right: 16px;
 }
 
 .linha-cardapio::after {
-    margin-left: 10px;
+    margin-left: 16px;
 }
 
 .linha-cardapio span{
@@ -179,74 +194,96 @@ header section{
 
 
 .cardapio {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
 }
 
-.cardapio div {
+.container_pizza  {
     display: flex;
     flex-direction: row;
     border-radius: 10px;
-    background-color: #fffbe6;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 10px;
     height: 150px; /* mesma altura da imagem */
     overflow: hidden;
+    
 }
 
-.cardapio div img.icone {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+.container_pizza img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain; /* Não corta a pizza */
+    background: #fff; /* Evita borda cinza */
     margin-right: 15px;
+    border-radius: 8px;
 }
 
 .cardapio div .texto-card {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
 .cardapio div .texto-card h2 {
-    margin: 0 0 5px 0;
+    margin: 6px;
     font-size: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
     white-space: nowrap; /* não quebra linha */
     overflow: hidden;
     text-overflow: ellipsis; /* corta se nome for longo */
+    color: #DB3623;
 }
 
 .cardapio div .texto-card p {
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.2em;
+    margin: 6px;
+    opacity: 0.65;
+    font-size: 16px;
+    line-height: 1.38;
+    margin-top: 2px;
     overflow: hidden;
     display: block;
     flex-grow: 1; /* ocupa o restante da altura do card sem ultrapassar a imagem */
+}
+
+.div_grid_pizzas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container_pizza{
+    width: calc(50% - 48px);
+    display: flex;
+    margin: 16px 24px;
+    border: 1px solid #DB3623;
 }
 
 
 .pizza_form{
     width: 500px;
     height: 500px;
-    border: 1px solid #DB3623;
 }
 
 
 /* FORMULÁRIO */
 .menu_dados {
-    background-color: #DB3623;
     padding: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    
+    justify-content: center;
+    gap: 80px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;     
 }
 
 .menu_dados h2 {
@@ -299,7 +336,7 @@ header section{
 }
 
 .menu_dados button {
-    border: 2px solid #7E8C11;
+    border: 2px solid #DB3623;
     padding: 10px 28px;
     border-radius: 6px;
     font-size: 16px;
@@ -308,30 +345,40 @@ header section{
     letter-spacing: 1px;
     width: 400px;
     background: transparent;
-    color: #7E8C11;
+    color: #DB3623;
     transition: .5s;
 }
 
 
 .menu_dados button:hover{
-    background: #7E8C11;
+    background: #DB3623;
     color: #fffbe6;
 }
 
 
 footer {
-    background-color: #f4e9d8;
-    padding: 20px;
+    background-color: #fff;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 footer div {
     margin: 10px;
-    flex-direction: row;
     padding: 10px;
     width: 100%;
+    font-size: 22px;
+    color: #7E8C11;
+}
+
+footer p, h4{
+    margin-bottom: 24px;
+}
+
+footer h4{
+    color: #7E8C11;
 }
 
 footer img {
@@ -342,9 +389,18 @@ footer img {
 
 footer a {
     display: block;
-    color: #DB3623;
+    color: #7E8C11;
     text-decoration: none;
     margin-bottom: 5px;
+}
+
+.bloco-final{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
 }
 
 
