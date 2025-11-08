@@ -13,7 +13,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.5;
-    background-color: rgba(249, 214, 176, 0.7); /* bege/translúcido */
+    background-color: rgba(244, 233, 216, 0.9);
 }
 
 header section{
@@ -53,7 +53,7 @@ header section{
 
     width: 60%;
     height: 1px;
-    background: #c94c3d;
+    background: #7e8c11;
 
     transform: scaleX(0);
     transform-origin: right;
@@ -78,14 +78,14 @@ header section{
 
 .menu a{
     font-size: 18px;
-    color: #fff;
+    color: #260801;
     font-weight: 500;
     margin: 0 20px;
     transition: .3s;
 }
 
 .menu a:hover, .menu a.active{
-    color: #c94c3d;
+    color: #7E8C11;
     text-transform: uppercase;
 }
 
@@ -93,7 +93,7 @@ header section{
 .introducao {
     text-align: center;
     padding: 30px 10px;
-    color: #c94c3d;
+    color: #DB3623;
     font-size: 16px;
     margin: 25px 0 30px;
     line-height: 1.2;
@@ -102,7 +102,7 @@ header section{
 .introducao h2{
     font-size: 45px;
     line-height: 1.2;
-    background: linear-gradient(#59ffff, #1952ab);
+    background: linear-gradient(#7E8C11, rgb(85, 82, 82));
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -111,7 +111,7 @@ header section{
     width: 50%;
     margin: auto;
     font-size: 16px;
-    color: #c94c3d
+    color: #7E8C11
 }
 
 .introducao img {
@@ -187,24 +187,27 @@ header section{
     flex-grow: 1; /* ocupa o restante da altura do card sem ultrapassar a imagem */
 }
 
+
+.pizza_form{
+    width: 500px;
+    height: 500px;
+    border: 1px solid #DB3623;
+}
+
+
 /* FORMULÁRIO */
 .menu_dados {
-    background-color: #e74c3c; /* vermelho pizza */
+    background-color: #DB3623;
     padding: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-}
-
-.pizza_form{
-    width: 700px;
-    height: 500px;
-    border: 1px solid #c94c3d; /* vermelho tomate */
+    
 }
 
 .menu_dados h2 {
-    color: #fffbe6; /* creme */
+    color: #fffbe6;
     margin-bottom: 15px;
 }
 
@@ -214,33 +217,38 @@ header section{
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
-    border: 1px solid #c94c3d; /* vermelho tomate */
+    border: 1px solid #DB3623;
     padding: 20px;
+    border-radius: 10px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    padding: 30px 40px;
 }
 
 .menu_dados label {
     font-weight: bold;
-    color: #fffbe6; /* creme */
+    color: #fffbe6;
 }
 
 .menu_dados input,
 .menu_dados select,
 .menu_dados option,
 .menu_dados textarea {
-    background-color: rgba(249, 214, 176, 0.7); /* bege/translúcido */
-    color: #5a1f0b; /* marrom escuro */
+    background-color: rgba(244, 233, 216, 0.9);
+    color: #260801;
     border: none;
     border-radius: 25px;
     padding: 5px;
     width: 400px;
     font-size: 16px;
     padding: 10px 22px 10px 10px;
-    border: none;
+    border: 2px solid rgba(255, 255, 255, .2);
     outline: none;
 }
 
 .menu_dados input::placeholder{
-    color: white;
+    color: #260801;
 }
 
 .menu_dados textarea{
@@ -248,7 +256,7 @@ header section{
 }
 
 .menu_dados button {
-    border: 2px solid #42c1e8;
+    border: 2px solid #7E8C11;
     padding: 10px 28px;
     border-radius: 6px;
     font-size: 16px;
@@ -257,19 +265,19 @@ header section{
     letter-spacing: 1px;
     width: 400px;
     background: transparent;
-    color: #42c1e8;
+    color: #7E8C11;
     transition: .5s;
 }
 
 
 .menu_dados button:hover{
-    background: #42c1e8;
-    color: #01003f;
+    background: #7E8C11;
+    color: #fffbe6;
 }
 
 
 footer {
-    background-color: #f9d6b0; /* laranja/bege */
+    background-color: #f4e9d8;
     padding: 20px;
     display: flex;
     justify-content: space-around;
@@ -291,7 +299,7 @@ footer img {
 
 footer a {
     display: block;
-    color: #c94c3d; /* vermelho tomate */
+    color: #DB3623;
     text-decoration: none;
     margin-bottom: 5px;
 }
