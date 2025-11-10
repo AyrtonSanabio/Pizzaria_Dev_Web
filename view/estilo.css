@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Parte superior do site*/
+
+.menu-superior{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #a52a2a; 
+    color: black;
+    align-items: end;
+    
+}
+
+.menu-esquerda{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+
+}
+
+.logo img{
+    border: 1px solid black;
+    width: 300px;
+    height: 150px;
+}
+
+.nav-bar-esquerda ul, .nav-bar-direita ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 8px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-bar-esquerda ul a{
+    margin-left: 30px;
+}
+
+.nav-bar-esquerda{
+    margin-left: 20px;
+}
+
+.nav-bar-direita{
+    margin-right: 50px;
+    
+}
+
+/*Introdução ao site*/
+
+.introducao{
+    background: rgb(194, 31, 31);
+}
+
+.introducao-texto h1{
+    color: orange;
+    font-size: 32px;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+.introducao-texto h2{
+    color: white;
+    font-weight: bold;
+    font-size: 60px;
+    margin-left: 25px;
+}
+
+.introducao button{
+    margin-left: 25px;
+}
+
+.add-carrinho{
+    background: rgb(180, 15, 15);
+    color: white;
+    width: 150px;
+    font-size: 16px;
+    padding: 15px;
+    border: none;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+/*Oferta de pizzas com animação lateral e flip*/
+
+.pizza-flip-rolagem-lateral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(52, 39, 152);
+    
+}
+
+.pizza-flip-rolagem-lateral h2{
+    color: orange;
+    font-size: 32px;
+    margin-top: 24px;
+}
+
+.pizza-flip-rolagem-lateral h1{
+    color: black;
+    font-size: 60px;
+    margin-top: 8px;
+}
+
+.container-flip-main{
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    margin-top: 20px;
+    background: blue;
+}
+
+.container-pizza-flip{
+    background: red;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    
+}
+
+.card-pizza-flip{
+    display: flex;
+    border: 1px solid black;
+    height: 250px;
+    width: 180px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: white;
+}
+
+.card-pizza-flip img{
+    width: 150px;
+    height: 150px;
+    margin-top: 15%;
+}
+
+.card-pizza-flip h1{
+    font-size:24px;
+    font-weight: bold;
+    
+}
+
+.card-pizza-flip p{
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.pizza-flip-texto{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*Pizza ofertas*/
+
+.pizza-ofertas{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 150px;
+    border: 1px solid black;
+}
+
+.container-oferta{
+    display: flex;
+    width: 32%;
+    height: 250px;
+    flex-direction: column;
+    justify-content: end;
+    background-image: linear-gradient(to bottom, black, rgb(48, 45, 45), rgb(132, 95, 25), rgb(187, 131, 25));
+}
+
+.container-oferta img, .container-oferta button{
+    margin-left: 5%;
+}
+
+.container-oferta button{
+    margin-bottom: 7%;
+}
+
+.oferta-texto{
+    border: 1px solid black;
+    margin-left: 5%;
+}
+
+.oferta-texto h1{
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.oferta-texto p{
+    color: orange;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/*Segunda Oferta*/
+
+
+.segunda-oferta{
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 150px;
+    height: 350px;
+}
+
+.segunda-oferta h1{
+    color: red;
+    font-weight: bold;
+    font-size: 48px;
+    margin-top: 50px;
+    margin-left: 25px;
+}
+
+.segunda-oferta p{
+    color: orange;
+    font-weight: bold;
+    font-size: 48px;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.segunda-oferta button{
+    margin-left: 25px;
+}
+
+.segunda-oferta img{
+    margin-left: 25px;
+}
+
+/*Cardápio*/
+
+.cardapio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+}
+
+.cardapio-texto-sup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.cardapio-texto-sup h2{
+    color: orange;
+    font-weight: bold;
+    font-size: 28px;
+    
+}
+
+.cardapio-texto-sup h1{
+    color: black;
+    font-size: 48px;
+}
+
+.cardapio-icones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid black
+}
+
+.cardapio-icones img{
+    width: 50px;
+    height: 50px;
+}
+
+.cardapio-icones-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.cardapio-icones-child img{
+    margin-bottom: 7px;
+}
+
+.cardapio-icones-child p{
+    font-size: 18px;
+    font-weight: bold;
+}
