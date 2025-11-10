@@ -36,18 +36,18 @@
     margin-bottom: 20px;
     font-size: 24px;
     font-weight: bold;
-    color: #ffae42;
+    color: #d72638;
 }
 
 .nav-bar-esquerda ul a{
     margin-left: 30px;
-    color: #ffae42;
+    color: #d72638;
     text-decoration: none;
     transition: 0.3s;
 }
 
 .nav-bar-esquerda ul a:hover{
-    color: #ff7b00;
+    color: #ff4444;
 }
 
 .nav-bar-esquerda{
@@ -61,11 +61,12 @@
 /*Introdução ao site*/
 
 .introducao{
-    background: linear-gradient(to bottom, #1a1a1a, #2a1a00);
+    background: linear-gradient(to bottom, #1a1a1a, #2a2a2a);
+    
 }
 
 .introducao-texto h1{
-    color: #ff7b00;
+    color: #d72638;
     font-size: 32px;
     margin-left: 25px;
     font-weight: bold;
@@ -83,7 +84,7 @@
 }
 
 .add-carrinho{
-    background: #ff7b00;
+    background: #d72638;
     color: #ffffff;
     width: 150px;
     font-size: 16px;
@@ -96,7 +97,7 @@
 }
 
 .add-carrinho:hover{
-    background: #ffa64d;
+    background: #ff4444;
 }
 
 /*Oferta de pizzas com animação lateral e flip*/
@@ -109,7 +110,7 @@
 }
 
 .pizza-flip-rolagem-lateral h2{
-    color: #ff7b00;
+    color: #d72638;
     font-size: 32px;
     margin-top: 24px;
 }
@@ -126,7 +127,7 @@
     width: 80%;
     justify-content: center;
     margin-top: 20px;
-    background: #262626;
+    background: #2a2a2a;
     border-radius: 8px;
     padding: 10px;
 }
@@ -145,15 +146,15 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background: #fffaf2;
+    background: #fff5f5;
     border-radius: 10px;
-    box-shadow: 0 0 8px rgba(255, 165, 0, 0.3);
+    box-shadow: 0 0 8px rgba(215, 38, 56, 0.3);
     transition: 0.3s;
 }
 
 .card-pizza-flip:hover{
     transform: translateY(-5px);
-    box-shadow: 0 0 12px rgba(255, 140, 0, 0.6);
+    box-shadow: 0 0 12px rgba(215, 38, 56, 0.6);
 }
 
 .card-pizza-flip img{
@@ -169,7 +170,7 @@
 }
 
 .card-pizza-flip p{
-    color: #ff7b00;
+    color: #d72638;
     font-weight: bold;
     font-size: 18px;
 }
@@ -196,7 +197,7 @@
     height: 250px;
     flex-direction: column;
     justify-content: end;
-    background-image: linear-gradient(to bottom, #000000, #331a00, #663300, #ff7b00);
+    background-image: linear-gradient(to bottom, #000000, #7a0b16, #d72638, #ff4444);
     border-radius: 8px;
     overflow: hidden;
     transition: 0.3s;
@@ -212,7 +213,7 @@
 
 .container-oferta button{
     margin-bottom: 7%;
-    background: #ff7b00;
+    background: #d72638;
     color: white;
     font-weight: bold;
     padding: 10px 15px;
@@ -221,7 +222,7 @@
 }
 
 .container-oferta button:hover{
-    background: #ffa64d;
+    background: #ff4444;
 }
 
 .oferta-texto{
@@ -235,7 +236,7 @@
 }
 
 .oferta-texto p{
-    color: #ffae42;
+    color: #d72638;
     font-weight: bold;
     font-size: 24px;
 }
@@ -252,7 +253,7 @@
 }
 
 .segunda-oferta h1{
-    color: #ff7b00;
+    color: #d72638;
     font-weight: bold;
     font-size: 48px;
     margin-top: 50px;
@@ -269,7 +270,7 @@
 
 .segunda-oferta button{
     margin-left: 25px;
-    background: #ff7b00;
+    background: #d72638;
     color: white;
     padding: 12px 18px;
     border: none;
@@ -279,7 +280,7 @@
 }
 
 .segunda-oferta button:hover{
-    background: #ffa64d;
+    background: #ff4444;
 }
 
 .segunda-oferta img{
@@ -292,7 +293,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: white;
+    background: #ffffff;
 
 }
 
@@ -306,7 +307,7 @@
 }
 
 .cardapio-texto-sup h2{
-    color: #ff7b00;
+    color: #d72638;
     font-weight: bold;
     font-size: 28px;
 }
@@ -341,7 +342,7 @@
     height: 100px;
     padding: 5px;
     border-radius: 8px;
-    box-shadow: 0 0 6px rgba(255, 140, 0, 0.3);
+    box-shadow: 0 0 6px rgba(215, 38, 56, 0.3);
 }
 
 .cardapio-icones-child img{
@@ -351,7 +352,7 @@
 .cardapio-icones-child p{
     font-size: 18px;
     font-weight: bold;
-    color: #ffae42;
+    color: #d72638;
 }
 
 
@@ -403,7 +404,7 @@
 /*Anuncio animacao lateral infinita*/
 
 .anuncio-lateral-infinito{
-    color: red;
+    color: #d72638;
     font-size: 72px;
     margin-top: 50px;
 }
@@ -412,14 +413,14 @@
 /*Terceira oferta*/
 
 .terceira-oferta{
-    background-image: linear-gradient(to bottom, #ff7b00, #000000);
+    background-image: linear-gradient(to bottom, #d72638, #1a1a1a);
     height: 400px;
     display: flex;
     justify-content: space-between;
 }
 
 .container-terceira-oferta{
-    background: green;
+    background: #7a0b16;
     height: 350px;
     width: 450px;
     padding: 15px;
@@ -431,7 +432,7 @@
 }
 
 .terceira-oferta-texto h1{
-    color: orange;
+    color: #ff4444;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
@@ -455,7 +456,7 @@
 }
 
 .card-terceira-oferta{
-    background: orange;
+    background: #d72638;
     height: 80px;
     width: 80px;
     color: white;
@@ -467,4 +468,160 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+/*Chefes*/
+
+.chefes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 350px;
+}
+
+.chefes-texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chefes-texto h2{
+    color: #d72638;
+    font-weight: bold;
+    font-size: 48px;
+
+}
+
+.chefes-texto h1{
+    color: black;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.container-chefes{
+    background: #2a2a2a;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+.container-chefes img{
+    height: 350px;
+    width: 350px;
+    margin-bottom: 20px;
+}
+
+.container-chefes-child{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 10px;
+}
+
+.container-chefes-child p{
+    font-weight: bold;
+    font-size: 36px;
+    color: #d72638;
+}
+
+/*Opiniao usuarios*/
+
+.opiniao-users{
+    background: #d72638;
+    display: flex;
+    gap: 15px;
+}
+
+.opiniao-users h1{
+    display: inline-block;
+    border: 10px solid black;
+}
+
+.container-opiniao{
+    background: #1a1a1a;
+    height: 300px;
+    padding: 10px;
+    border: 10px solid #7a0b16;
+    
+}
+
+.container-opiniao img{
+    width: 50px;
+    height: 50px;
+    
+}
+
+.user-sup{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.user-sup p{
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 3%;
+    color: #ffffff;
+}
+
+.estrelas{
+    color: #ff4444;
+    font-size: 36px;
+    display: flex;
+    width: 300px;
+    letter-spacing: 30px;
+    border: 1px solid black;
+    justify-self: end;    
+}
+
+/*Carrossel infinito*/
+
+.carrossel-infinito{
+    display: flex;
+    background: #000000;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 250px;
+}
+
+.carrossel-infinito-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2a2a2a;
+    width: 300px;
+    height: 350px;
+    border: 1px solid #7a0b16;
+}
+
+.carrossel-infinito-child img{
+    height: 200px;
+    width: 200px;
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+.carrossel-infinito-child p{
+    color: #d72638;
+    font-weight: bold;
+    font-size: 46px;
+
+}
+
+/*Video*/
+
+.video{
+    background-color: #d72638;
+    height: 600px;
+    width: 90%;
+    justify-self: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
 }
