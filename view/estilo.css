@@ -654,6 +654,8 @@ a{
 .cardapio-icones-child:hover svg{
     margin-bottom: 7px;
     color: var(--primary);
+    
+    
 }
 
 
@@ -701,7 +703,11 @@ a{
 .cardapio-container-child img{
     width: 100px;
     height: 100px;
-    
+    transition: 0.5s ease-out;
+}
+
+.cardapio-container-child img:hover{
+    transform: scale(1) rotate(20deg);
 }
 
 .cardapio-container-child-texto{
