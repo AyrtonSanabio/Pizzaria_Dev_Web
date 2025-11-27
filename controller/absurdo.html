@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizzareal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Menu superior -->
+    <header class="header" id="topo">
+        <div class="header-inner">
+            <div class="logo-area">
+                <span class="logo-icon">🍕</span>
+                <div class="logo-text">
+                    <h1>Pizzareal</h1>
+                    <p>Pizza artesanal & delivery</p>
+                </div>
+            </div>
+
+            <nav class="nav" aria-label="Menu principal">
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#promocoes" class="nav-link">Promoções</a></li>
+                    <li><a href="#cardapio" class="nav-link">Cardápio</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a class="header-phone" href="tel:+5537999492573">
+                    <span class="header-phone-icon">📞</span>
+                    <span class="header-phone-text">(37) 999949-2573</span>
+                </a>
+
+                <div class="cart" id="cart">
+                    <button class="cart-button" id="cart-toggle" type="button">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-label">Carrinho</span>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </button>
+                    <div class="cart-panel" id="cart-panel" aria-hidden="true">
+                        <h3>Seu pedido</h3>
+                        <ul class="cart-items" id="cart-items"></ul>
+                        <div class="cart-footer">
+                            <div class="cart-total">
+                                Total: R$ <span id="cart-total">0,00</span>
+                            </div>
+                            <div class="cart-actions">
+                                <button class="btn btn-outline" id="cart-clear" type="button">Limpar</button>
+                                <a class="btn" id="cart-whatsapp" href="#" target="_blank" rel="noopener noreferrer">
+                                    Finalizar no WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero / Introdução -->
+        <section class="hero" id="home">
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <h2>A pizza que já nasceu coroada.</h2>
+                    <p>
+                        Massa de longa fermentação, molho artesanal e ingredientes selecionados,
+                        assados no ponto perfeito para chegar quente e crocante até você.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" id="btn-order-now" type="button">
+                            Fazer pedido agora
+                        </button>
+                        <button class="btn btn-outline" id="btn-see-menu" type="button">
+                            Ver cardápio
+                        </button>
+                    </div>
+                    <div class="hero-badges">
+                        <span>🚗 Entrega rápida</span>
+                        <span>🔥 Forno a gás ultra quente</span>
+                        <span>⭐ 4.9 / 5 avaliações</span>
+                    </div>
+                </div>
+
+                <div class="hero-highlight">
+                    <div class="hero-promo">
+                        <h3>Combo Rei do Pepperoni</h3>
+                        <p>2 pizzas grandes + 1 refrigerante 2L</p>
+                        <div class="hero-promo-price">
+                            <span class="old-price">R$ 129,90</span>
+                            <span class="new-price">R$ 99,90</span>
+                        </div>
+                        <div class="hero-countdown">
+                            <p>Promoção acaba em:</p>
+                            <div class="countdown" id="hero-countdown">
+                                <span><strong id="cd-hours">00</strong><small>h</small></span>
+                                <span><strong id="cd-minutes">00</strong><small>min</small></span>
+                                <span><strong id="cd-seconds">00</strong><small>s</small></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-card">
+                        <h4>Horário de funcionamento</h4>
+                        <p>Dom a Qui: 18h às 23h</p>
+                        <p>Sex e Sáb: 18h às 00h</p>
+                        <p>Bairro de entrega: Centro e região</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promoções -->
+        <section class="section" id="promocoes">
+            <div class="section-header">
+                <h2>Ofertas imperdíveis</h2>
+                <p>Combos especiais para dividir com a galera ou matar a fome sozinho.</p>
+            </div>
+            <div class="promo-grid">
+
+                <!-- Promoção 1 -->
+                <article class="promo-card destaque">
+                    <span class="promo-tag">Mais pedido</span>
+                    <h3>Combo Pepperoni King</h3>
+                    <p>2 pizzas grandes de pepperoni + garlic bread.</p>
+                    <div class="promo-price">
+                        <span class="promo-old">R$ 139,90</span>
+                        <span class="promo-new">R$ 109,90</span>
+                    </div>
+                    <button class="btn btn-primary btn-add-combo" type="button"
+                            data-items='[{"nome":"Pizza Pepperoni Grande","preco":54.95},{"nome":"Pizza Pepperoni Grande","preco":54.95},{"nome":"Garlic Bread","preco":0.00}]'>
+                        Quero esse combo
+                    </button>
+                </article>
+                
+                <!-- Promoção 2 -->
+                <article class="promo-card">
+                    <span class="promo-tag">Solo</span>
+                    <h3>Pizza individual + refri</h3>
+                    <p>Pizza individual de qualquer sabor + lata de refri.</p>
+                    <div class="promo-price">
+                        <span class="promo-new">R$ 39,90</span>
+                    </div>
+                    <button class="btn btn-outline btn-add-combo" type="button"
+                            data-items='[{"nome":"Pizza Individual","preco":34.90},{"nome":"Refrigerante Lata","preco":5.00}]'>
+                        Adicionar ao carrinho
+                    </button>
+                </article>
+                
+                <!-- Promoção 3 -->
+                <article class="promo-card">
+                    <span class="promo-tag">Família</span>
+                    <h3>Quarteto supremo</h3>
+                    <p>4 pizzas médias variadas para toda a família.</p>
+                    <div class="promo-price">
+                        <span class="promo-old">R$ 219,90</span>
+                        <span class="promo-new">R$ 189,90</span>
+                    </div>
+                    <button class="btn btn-outline btn-add-combo" type="button"
+                            data-items='[{"nome":"Pizza Família 1","preco":47.47},{"nome":"Pizza Família 2","preco":47.47},{"nome":"Pizza Família 3","preco":47.47},{"nome":"Pizza Família 4","preco":47.47}]'>
+                        Adicionar ao carrinho
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Cardápio -->
+        <section class="section" id="cardapio">
+            <div class="section-header">
+                <h2>Cardápio</h2>
+                <p>Escolha seu sabor favorito e monte seu próprio combo.</p>
+            </div>
+
+            <div class="menu-filters">
+                <button class="chip chip-active" data-filter="todas" type="button">Todas</button>
+                <button class="chip" data-filter="tradicional" type="button">Tradicionais</button>
+                <button class="chip" data-filter="especiais" type="button">Especiais</button>
+                <button class="chip" data-filter="doces" type="button">Doces</button>
+                <button class="chip" data-filter="veg" type="button">Veg & veganas</button>
+            </div>
+
+            <div class="menu-grid" id="menu-grid">
+
+                <!-- Tradicionais -->
+                <article class="menu-item" data-category="tradicional">
+                    <div class="menu-info">
+                        <h3>Margherita</h3>
+                        <p>Molho de tomate, mussarela, manjericão fresco e azeite.</p>
+                        <span class="menu-tag">Tradicional</span>
+                    </div>
+                    <div class="menu-meta">
+                        <span class="menu-price" data-price="44.90">R$ 44,90</span>
+                        <button class="btn-sm btn-add-cart" type="button"
+                                data-name="Pizza Margherita" data-price="44.90">
+                            Adicionar
+                        </button>
+                    </div>
+                </article>
+
+                <article class="menu-item" data-category="tradicional">
+                    <div class="menu-info">
+                        <h3>Calabresa</h3>
+                        <p>Calabresa fatiada, cebola, mussarela e orégano.</p>
+                        <span class="menu-tag">Tradicional</span>
+                    </div>
+                    <div class="menu-meta">
+                        <span class="menu-price" data-price="47.90">R$ 47,90</span>
+                        <button class="btn-sm btn-add-cart" type="button"
+                                data-name="Pizza Calabresa" data-price="47.90">
+                            Adicionar
+                        </button>
+                    </div>
+                </article>
+
+                <article class="menu-item" data-category="tradicional">
+                    <div class="menu-info">
+                        <h3>Frango com Catupiry</h3>
+                        <p>Frango desfiado, catupiry, milho e mussarela.</p>
+                        <span class="menu-tag">Tradicional</span>
+                    </div>
+                    <div class="menu-meta">
+                        <span class="menu-price" data-price="49.90">R$ 49,90</span>
+                        <button class="btn-sm btn-add-cart" type="button"
+                                data-name="Pizza Frango com Catupiry" data-price="49.90">
+                            Adicionar
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Especiais -->
+                <article class="menu-item" data-category="especiais">
+                    <div class="menu-info">
+                        <h3>Pepperoni King</h3>
+                        <p>Extra pepperoni, dupla camada de mussarela e borda recheada.</p>
+                        <span class="menu-tag menu-tag-special">Especial da casa</span>
+                    </div>
+                    <div class="menu-meta">
+                        <span class="menu-price" data-price="59.90">R$ 59,90</span>
+                        <button class="btn-sm btn-add-cart" type="button"
+                                data-name="Pizza Pepperoni King" data-price="59.90">
+                            Adicionar
+                        </button>
+                    </div>
+                </article>
+
+                <article class="menu-item" data-category="especiais">
+                    <div class="menu-info">
+                        <h3>Quatro Queijos Premium</h3>
+                        <p>Mussarela, provolone, gorgonzola e parmesão.</p>
+                        <span class="menu-tag menu-tag-special">Especial</span>
+                    </div>
+                    <div class="menu-meta">
+                        <span class="menu-price" data-price="61.90">R$ 61,90</span>
+                        <button class="btn-sm btn-add-cart" type="button"
+                                data-name="Pizza Quatro Queijos" data-price="61.90">
+                            Adicionar
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Veg / veganas -->
+                <article class="menu-item" data-category="veg">
+                    <div class="menu-info">
+                        <h3>Margarita Veg</h3>
+                        <p>Queijo vegano, tomate, manjericão e azeite extra virgem.</p>
+                        <span class="menu-tag menu-tag-veg">Vegana</span>
+                    </div>
+                    <div class="menu-meta">
+                        <span class="menu-price" data-price="55.90">R$ 55,90</span>
+                        <button class="btn-sm btn-add-cart" type="button"
+                                data-name="Pizza Margarita Veg" data-price="55.90">
+                            Adicionar
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Doces -->
+                <article class="menu-item" data-category="doces">
+                    <div class="menu-info">
+                        <h3>Chocolate com Morango</h3>
+                        <p>Creme de chocolate, morango fresco e leite condensado.</p>
+                        <span class="menu-tag menu-tag-sweet">Doce</span>
+                    </div>
+                    <div class="menu-meta">
+                        <span class="menu-price" data-price="52.90">R$ 52,90</span>
+                        <button class="btn-sm btn-add-cart" type="button"
+                                data-name="Pizza Chocolate com Morango" data-price="52.90">
+                            Adicionar
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section class="section section-alt" id="contato">
+            <div class="section-header">
+                <h2>Contato e localização</h2>
+                <p>Fale com a gente ou faça seu pedido por aqui.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Endereço</h3>
+                    <p>Rua da Pizza, 123 - Centro</p>
+                    <p>Sua Cidade - SP</p>
+
+                    <h3>Contato</h3>
+                    <p>Telefone/WhatsApp: (11) 99999-0000</p>
+                    <p>E-mail: contato@pepperoniking.com</p>
+
+                    <h3>Redes sociais</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" id="social-whatsapp" aria-label="WhatsApp">🟢</a>
+                        <a href="#" class="social-link" id="social-instagram" aria-label="Instagram">📸</a>
+                        <a href="#" class="social-link" id="social-facebook" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" id="social-youtube" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-row">
+                        <label for="nome">Nome</label>
+                        <input id="nome" type="text" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="telefone">Telefone</label>
+                        <input id="telefone" type="tel" placeholder="(11) 99999-0000" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="mensagem">Mensagem ou pedido</label>
+                        <textarea id="mensagem" rows="4" placeholder="Digite aqui seu pedido ou dúvida"></textarea>
+                    </div>
+                    <button class="btn btn-primary" id="btn-contact-whatsapp" type="button">
+                        Enviar pelo WhatsApp
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h3>Pepperoni King</h3>
+                <p>Pizzaria artesanal especializada em pepperoni e combos para todas as fomes.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links rápidos</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#promocoes">Promoções</a></li>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Horários</h4>
+                <p>Dom a Qui: 18h às 23h</p>
+                <p>Sex e Sáb: 18h às 00h</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Pepperoni King. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
