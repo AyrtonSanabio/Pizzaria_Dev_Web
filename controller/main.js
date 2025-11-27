@@ -416,18 +416,18 @@ function initSocialLinks() {
     var yt = document.getElementById('social-youtube');
 
     if (whats) {
-        whats.href = 'https://wa.me/5511999990000?text=' +
-            encodeURIComponent('Olá! Quero fazer um pedido na Pepperoni King.');
+        whats.href = 'https://wa.me/5537999492573?text=' +
+            encodeURIComponent('Olá! Quero fazer um pedido na Pizzareal.');
         whats.target = '_blank';
         whats.rel = 'noopener noreferrer';
     }
     if (insta) {
-        insta.href = 'https://www.instagram.com/seu_perfil_aqui';
+        insta.href = 'https://www.instagram.com/ayrtonsanabiobjj';
         insta.target = '_blank';
         insta.rel = 'noopener noreferrer';
     }
     if (face) {
-        face.href = 'https://www.facebook.com/sua_pagina_aqui';
+        face.href = 'https://www.facebook.com/ayrton.sanabio.12';
         face.target = '_blank';
         face.rel = 'noopener noreferrer';
     }
@@ -455,7 +455,7 @@ function initContactWhatsApp() {
             '.%0A%0A' +
             'Mensagem/Pedido:%0A' + (mensagem ? encodeURIComponent(mensagem.value) : '');
 
-        var url = 'https://wa.me/5511999990000?text=' + texto;
+        var url = 'https://wa.me/5537999492573?text=' + texto;
         window.open(url, '_blank');
     });
 }
