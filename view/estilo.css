@@ -1,0 +1,45 @@
+:root{
+    --cor-titulos: #ffd700;
+    --cor-paragrafos: #ff5100;
+    --cor-neutra: #fff4e2;
+    --text-soft: #e0c9aa;
+}
+
+/* Tipografia e fontes */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Ou sobrescreva especificamente as classes do Bootstrap */
+h1.text-warning, h2.text-warning, h3.text-warning, h4.text-warning {
+    font-family: 'Georgia', serif;
+    color: var(--cor-paragrafos) !important;
+}
+
+/* Parágrafos */
+p {
+    color: var(--cor-neutra);
+}
+
+/* Ícones */
+.icones {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+
+
+
+/* Formulário */
+form input, form textarea {
+    border: 1px solid var(--cor-titulos);
+    border-radius: 4px;
+    padding: 6px;
+}
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #ff4500;
+}
+
+
