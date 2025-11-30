@@ -8,136 +8,71 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Seu CSS separado para personalizações -->
+    <!-- CSS separado para personalizações específicas -->
     <link rel="stylesheet" href="..//view/estilo.css">
 </head>
 <body>
-
-    <!-- Cabeçalho / Menu superior -->
-    <header class="bg-dark text-light sticky-top shadow" id="topo">
-        <div class="container d-flex justify-content-between align-items-center py-2">
-
-            <!-- Logo -->
-            <div class="d-flex align-items-center gap-2">
-                <span class="fs-2">🍕</span>
-                <div>
-                    <h1 class="h4 text-warning mb-0">Pizzareal</h1>
-                    <p class="small text-light mb-0">Pizza artesanal & delivery</p>
-                </div>
-            </div>
-
-            <!-- Navegação -->
-            <nav aria-label="Menu principal">
-                <ul class="nav justify-content-center gap-3">
-                    <li class="nav-item"><a href="#home" class="nav-link text-light active">Home</a></li>
-                    <li class="nav-item"><a href="#promocoes" class="nav-link text-light">Promoções</a></li>
-                <li class="nav-item"><a href="#cardapio" class="nav-link text-light">Cardápio</a></li>
-                    <li class="nav-item"><a href="#sobre" class="nav-link text-light">Sobre</a></li>
-                    <li class="nav-item"><a href="#contato" class="nav-link text-light">Contato</a></li>
-                </ul>
-            </nav>
-
-            <!-- Ações (telefone + carrinho) -->
+  <!-- Cabeçalho / Menu superior -->
+  <header class="bg-dark text-light sticky-top shadow" id="topo">
+      <div class="container d-flex justify-content-between align-items-center py-2">
+          <!-- Logo -->
+          <div class="d-flex align-items-center gap-2">
+              <span class="fs-2">🍕</span>
+              <div>
+                  <h1 class="h4 text-warning mb-0">Pizzareal</h1>
+                  <p class="small text-light mb-0">Pizza artesanal & delivery</p>
+              </div>
+          </div>
+          <!-- Navegação -->
+          <nav aria-label="Menu principal">
+              <ul class="nav justify-content-center gap-3">
+                  <li class="nav-item"><a href="#home" class="nav-link text-light active">Home</a></li>
+                  <li class="nav-item"><a href="#promocoes" class="nav-link text-light">Promoções</a></li>
+                  <li class="nav-item"><a href="#cardapio" class="nav-link text-light">Cardápio</a></li>
+                  <li class="nav-item"><a href="#contato" class="nav-link text-light">Contato</a></li>
+              </ul>
+          </nav>
             <div class="d-flex align-items-center gap-3">
-                <a href="tel:+5537999492573" class="text-light fw-bold d-flex align-items-center gap-1">
-                    📞 <span>(37) 999949-2573</span>
-                </a>
-
                 <!-- Carrinho -->
                 <div class="dropdown">
-                    <button class="btn btn-warning fw-bold d-flex align-items-center gap-2" id="alternar-carrinho" data-bs-toggle="dropdown" type="button">
+                    <button class="btn btn-warning fw-bold d-flex align-items-center gap-2" 
+                            id="alternar-carrinho" 
+                            data-bs-toggle="dropdown" 
+                            data-bs-auto-close="false"
+                            type="button">
                         🛒 <span>Carrinho</span>
                         <span class="badge bg-danger rounded-pill" id="contador-carrinho">0</span>
                     </button>
+
                     <div class="dropdown-menu dropdown-menu-end p-3 bg-dark text-light" id="painel-carrinho" aria-hidden="true">
                         <h3 class="h6 text-warning">Seu pedido</h3>
-                        <ul class="list-unstyled small mb-2" id="itens-carrinho"></ul>
+                        <p class="text-warning aviso">Clique em um item para remover do carrinho</p>
+                        <ul class="list-unstyled large mb-2" id="itens-carrinho"></ul>
                         <div class="fw-bold mb-2">
                             Total: R$ <span id="total-carrinho">0,00</span>
                         </div>
                         <div class="d-flex gap-2">
                             <button class="btn btn-outline-warning flex-fill" id="limpar-carrinho" type="button">Limpar</button>
-                            <a class="btn btn-warning flex-fill" id="carrinho-whatsapp" href="#" target="_blank" rel="noopener noreferrer">
+                            <a class="btn btn-warning flex-fill" 
+                               id="carrinho-whatsapp" 
+                               href="#" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
                                 Finalizar no WhatsApp
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </header>
-
     <main>
 
     
-            <!-- Hero / Introdução -->
-<section class="bg-dark text-light py-5" id="home">
-  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-4">
-
-    <!-- Conteúdo principal -->
-    <div class="flex-grow-1">
-      <h2 class="text-warning mb-3">A pizza que já nasceu coroada.</h2>
-      <p class="mb-4">
-        Massa de longa fermentação, molho artesanal e ingredientes selecionados,
-        assados no ponto perfeito para chegar quente e crocante até você.
-      </p>
-
-      <!-- Ações -->
-      <div class="d-flex gap-3 mb-4">
-        <button class="btn btn-warning fw-bold" id="botao-pedir-agora" type="button">
-          Fazer pedido agora
-        </button>
-        <button class="btn btn-outline-warning fw-bold" id="botao-ver-cardapio" type="button">
-          Ver cardápio
-        </button>
-      </div>
-
-      <!-- Selos -->
-      <div class="d-flex gap-4 flex-wrap small text-light">
-        <span>🚗 Entrega rápida</span>
-        <span>🔥 Forno a gás ultra quente</span>
-        <span>⭐ 4.9 / 5 avaliações</span>
-      </div>
-    </div>
-
-    <!-- Destaques laterais -->
-    <div class="d-flex flex-column gap-4">
-
-      <!-- Promoção -->
-      <div class="bg-secondary text-light p-4 rounded shadow">
-        <h3 class="text-warning">Combo Rei do Pepperoni</h3>
-        <p>2 pizzas grandes + 1 refrigerante 2L</p>
-        <div class="d-flex justify-content-center gap-3 mb-3">
-          <span class="text-light text-decoration-line-through">R$ 129,90</span>
-          <span class="fw-bold text-warning fs-5">R$ 99,90</span>
-        </div>
-        <div>
-          <p class="mb-2">Promoção acaba em:</p>
-          <div class="d-flex gap-3" id="contador-hero">
-            <span><strong id="cd-horas">00</strong><small>h</small></span>
-            <span><strong id="cd-minutos">00</strong><small>min</small></span>
-            <span><strong id="cd-segundos">00</strong><small>s</small></span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card de informações -->
-      <div class="bg-secondary text-light p-4 rounded shadow">
-        <h4 class="text-warning">Horário de funcionamento</h4>
-        <p class="mb-1">Dom a Qui: 18h às 23h</p>
-        <p class="mb-1">Sex e Sáb: 18h às 00h</p>
-        <p class="mb-0">Bairro de entrega: Centro e região</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-            <!-- Hero / Introdução -->
-<section class="bg-dark text-light py-5" id="home">
+  <!-- Hero / Introdução -->
+  <section class="bg-dark text-light py-5" id="home">
     <div class="container d-flex flex-wrap justify-content-between align-items-center gap-4">
-  
+
       <!-- Conteúdo principal -->
       <div class="flex-grow-1">
         <h2 class="text-warning mb-3">A pizza que já nasceu coroada.</h2>
@@ -145,17 +80,21 @@
           Massa de longa fermentação, molho artesanal e ingredientes selecionados,
           assados no ponto perfeito para chegar quente e crocante até você.
         </p>
-  
+
         <!-- Ações -->
         <div class="d-flex gap-3 mb-4">
-          <button class="btn btn-warning fw-bold" id="botao-pedir-agora" type="button">
-            Fazer pedido agora
-          </button>
-          <button class="btn btn-outline-warning fw-bold" id="botao-ver-cardapio" type="button">
-            Ver cardápio
-          </button>
+          <a href="#contato">
+            <button class="btn btn-warning fw-bold" id="botao-pedir-agora" type="button">
+              Fazer pedido agora
+            </button>
+          </a>
+          <a href="#cardapio">
+            <button class="btn btn-outline-warning fw-bold" id="botao-ver-cardapio" type="button">
+              Ver cardápio
+            </button>
+          </a>
         </div>
-  
+
         <!-- Selos -->
         <div class="d-flex gap-4 flex-wrap small text-light">
           <span>🚗 Entrega rápida</span>
@@ -163,28 +102,20 @@
           <span>⭐ 4.9 / 5 avaliações</span>
         </div>
       </div>
-  
+
       <!-- Destaques laterais -->
       <div class="d-flex flex-column gap-4">
-  
+
         <!-- Promoção -->
-        <div class="bg-secondary text-light p-4 rounded shadow">
+        <div class="bg-secondary text-light p-4 rounded shadow" id="promocoes">
           <h3 class="text-warning">Combo Rei do Pepperoni</h3>
           <p>2 pizzas grandes + 1 refrigerante 2L</p>
           <div class="d-flex justify-content-center gap-3 mb-3">
             <span class="text-light text-decoration-line-through">R$ 129,90</span>
             <span class="fw-bold text-warning fs-5">R$ 99,90</span>
-          </div>
-          <div>
-            <p class="mb-2">Promoção acaba em:</p>
-            <div class="d-flex gap-3" id="contador-hero">
-              <span><strong id="cd-horas">00</strong><small>h</small></span>
-              <span><strong id="cd-minutos">00</strong><small>min</small></span>
-              <span><strong id="cd-segundos">00</strong><small>s</small></span>
-            </div>
-          </div>
+          </div>      
         </div>
-  
+
         <!-- Card de informações -->
         <div class="bg-secondary text-light p-4 rounded shadow">
           <h4 class="text-warning">Horário de funcionamento</h4>
@@ -192,20 +123,20 @@
           <p class="mb-1">Sex e Sáb: 18h às 00h</p>
           <p class="mb-0">Bairro de entrega: Centro e região</p>
         </div>
-  
+
       </div>
     </div>
   </section>
-  
 
-        <!-- Cardápio -->
-<section class="py-5 bg-dark text-light" id="cardapio">
-    <div class="container text-center mb-4">
-      <h2 class="text-warning">Cardápio</h2>
-      <p class="text-light">Escolha seu sabor favorito e monte seu próprio combo.</p>
-    </div>
+  <!-- Cardápio -->
+  <section class="py-5 bg-dark text-light" id="cardapio">
+      <div class="container text-center mb-4">
+        <h2 class="text-warning">Cardápio</h2>
+        <p class="text-light">Escolha seu sabor favorito e monte seu próprio combo.</p>
+      </div>
   
     <!-- Filtros -->
+    <!-- Usuário clica em algum dos filtros para exibir apenas as pizzas correspondentes-->
     <div class="container d-flex flex-wrap justify-content-center gap-2 mb-4">
       <button class="btn btn-warning active" data-filtro="todas" type="button">Todas</button>
       <button class="btn btn-outline-warning" data-filtro="tradicional" type="button">Tradicionais</button>
@@ -228,7 +159,8 @@
             data-nome="Pizza Margherita" data-preco="44.90">Adicionar</button>
         </div>
       </article>
-  
+      
+      <!-- Tradicional -->
       <article class="bg-secondary text-light p-4 rounded shadow flex-fill" style="max-width: 280px;" data-categoria="tradicional">
         <h3 class="text-warning">Calabresa</h3>
         <p>Calabresa fatiada, cebola, mussarela e orégano.</p>
@@ -239,7 +171,8 @@
             data-nome="Pizza Calabresa" data-preco="47.90">Adicionar</button>
         </div>
       </article>
-  
+      
+      <!-- Tradicional -->
       <article class="bg-secondary text-light p-4 rounded shadow flex-fill" style="max-width: 280px;" data-categoria="tradicional">
         <h3 class="text-warning">Frango com Catupiry</h3>
         <p>Frango desfiado, catupiry, milho e mussarela.</p>
@@ -262,7 +195,8 @@
             data-nome="Pizza Pepperoni King" data-preco="59.90">Adicionar</button>
         </div>
       </article>
-  
+      
+      <!-- Especiais -->
       <article class="bg-secondary text-light p-4 rounded shadow flex-fill" style="max-width: 280px;" data-categoria="especiais">
         <h3 class="text-warning">Quatro Queijos Premium</h3>
         <p>Mussarela, provolone, gorgonzola e parmesão.</p>
@@ -296,114 +230,150 @@
           <button class="btn btn-sm btn-outline-warning adicionar-carrinho" type="button"
             data-nome="Pizza Chocolate com Morango" data-preco="52.90">Adicionar</button>
         </div>
-      </article>
-  
-      <!-- Outros doces -->
-      <!-- Repita a mesma estrutura para os demais sabores -->
-      
+      </article>      
     </div>
   </section>
   
 
       <!-- Contato -->
-<section class="py-5 bg-dark text-light" id="contato">
-    <div class="container text-center mb-4">
-      <h2 class="text-warning">Contato e localização</h2>
-      <p class="text-light">Fale com a gente ou faça seu pedido por aqui.</p>
-    </div>
-  
-    <div class="container d-flex flex-wrap justify-content-center gap-4">
-  
-      <!-- Informações -->
-      <div class="bg-secondary text-light p-4 rounded shadow flex-fill" style="max-width: 350px;">
-        <h3 class="text-warning">Endereço</h3>
-        <p>Rua Rio de Janeiro, 11b - Sagrado Coração</p>
-        <p>Formiga - MG</p>
-  
-        <h3 class="text-warning mt-3">Contato</h3>
-        <p>Telefone/WhatsApp: (37) 99949-2573</p>
-        <p>E-mail: ayrtonsanabio@gmail.com</p>
-  
-        <h3 class="text-warning mt-3">Redes sociais</h3>
-        <div class="d-flex gap-3 fs-4">
-          <a href="#" class="text-success" aria-label="WhatsApp">
-            <img src="..//view/img/icon/whats.png" class="icones" alt="">
-          </a>
-          <a href="#" class="text-danger" aria-label="Instagram">
-            <img src="..//view/img/icon/instagram.png" class="icones" alt="">
-          </a>
-          <a href="#" class="text-primary" aria-label="Facebook">
-            <img src="..//view/img/icon/facebook.png" class="icones" alt="">
-          </a>
-          <a href="#" class="text-light" aria-label="YouTube">
-            <img src="..//view/img/icon/youtube.png" class="icones" alt="">
-          </a>
-        </div>
+  <section class="py-5 bg-dark text-light" id="contato">
+      <div class="container text-center mb-4">
+        <h2 class="text-warning">Contato e localização</h2>
+        <p class="text-light">Fale com a gente ou faça seu pedido por aqui.</p>
       </div>
-  
-      <!-- Formulário -->
-      <form class="bg-secondary text-light p-4 rounded shadow flex-fill" style="max-width: 400px;">
-        <div class="mb-3 text-start">
-          <label for="nome" class="form-label">Nome</label>
-          <input id="nome" type="text" class="form-control" placeholder="Seu nome" required>
+    
+      <div class="container d-flex flex-wrap justify-content-center">
+    
+        <!-- Informações -->
+        <div class="bg-secondary text-light p-4 rounded shadow flex-fill" style="max-width: 350px;">
+          <h3 class="text-warning">Endereço</h3>
+          <p>Rua Rio de Janeiro, 11b - Sagrado Coração</p>
+          <p>Formiga - MG</p>
+    
+          <h3 class="text-warning mt-3">Contato</h3>
+          <p>Telefone/WhatsApp: (37) 99949-2573</p>
+          <p>E-mail: ayrtonsanabio@gmail.com</p>
+    
+          <h3 class="text-warning mt-3">Redes sociais</h3>
+          <div class="d-flex gap-3 fs-4">
+            <a href="https://wa.me/5537999492573"  target="_blank" class="text-success" aria-label="WhatsApp">
+              <img src="..//view/img/icon/whats.png"  class="icones" alt="">
+            </a>
+            <a href="https://www.instagram.com/ayrtonsanabiobjj" target="_blank"  class="text-danger" aria-label="Instagram">
+              <img src="..//view/img/icon/instagram.png" class="icones" alt="">
+            </a>
+            <a href="https://www.facebook.com/ayrtonsanabio12"  target="_blank" class="text-primary" aria-label="Facebook">
+              <img src="..//view/img/icon/facebook.png" class="icones" alt="">
+            </a>
+            <a href="https://www.youtube.com/@ifmgcampusformiga"  target="_blank" class="text-light" aria-label="YouTube">
+              <img src="..//view/img/icon/youtube.png" class="icones" alt="">
+            </a>
+          </div>
         </div>
-        <div class="mb-3 text-start">
-          <label for="telefone" class="form-label">Telefone</label>
-          <input id="telefone" type="tel" class="form-control" placeholder="(37) 99949-2573" required>
-        </div>
-        <div class="mb-3 text-start">
-          <label for="mensagem" class="form-label">Mensagem ou pedido</label>
-          <textarea id="mensagem" rows="4" class="form-control" placeholder="Digite aqui seu pedido ou dúvida"></textarea>
-        </div>
-        <button class="btn btn-warning w-100 fw-bold" id="botao-contato-whatsapp" type="button">
-          Enviar pelo WhatsApp
-        </button>
-      </form>
-  
+
+    <!-- Formulário Quadrado com Flex -->
+        <form class="formulario-flex">
+          <!-- Nome e Telefone -->
+          <div class="linha">
+            <div class="campo">
+              <label for="nome">Nome</label>
+              <input id="nome" type="text" required>
+            </div>
+            <div class="campo">
+              <label for="telefone">Telefone</label>
+              <input id="telefone" type="tel" required>
+            </div>
+          </div>
+
+          <!-- CEP e Rua -->
+          <div class="linha">
+            <div class="campo">
+              <label for="cep">CEP</label>
+              <div class="cep-box">
+                <input id="cep" type="text" required>
+                <button type="button" id="buscar-cep">Buscar</button>
+              </div>
+            </div>
+            <div class="campo">
+              <label for="rua">Rua</label>
+              <input id="rua" type="text">
+            </div>
+          </div>
+
+          <!-- Bairro e Cidade -->
+          <div class="linha">
+            <div class="campo">
+              <label for="bairro">Bairro</label>
+              <input id="bairro" type="text">
+            </div>
+            <div class="campo">
+              <label for="cidade">Cidade</label>
+              <input id="cidade" type="text">
+            </div>
+          </div>
+
+          <!-- Estado e Mensagem -->
+          <div class="linha">
+            <div class="campo">
+              <label for="estado">Estado</label>
+              <input id="estado" type="text">
+            </div>
+            <div class="campo">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" rows="2"></textarea>
+            </div>
+          </div>
+
+          <!-- Botão WhatsApp -->
+          <button id="botao-contato-whatsapp" type="button">
+            Enviar pelo WhatsApp
+          </button>
+        </form>
     </div>
   </section>
 
    <!-- Rodapé -->
-<footer class="bg-dark text-light pt-5">
-    <div class="container d-flex flex-wrap justify-content-between gap-4 pb-4 border-bottom border-secondary">
-  
-      <!-- Coluna 1 -->
-      <div class="flex-fill" style="max-width: 300px;">
-        <h3 class="text-warning">Pizzareal</h3>
-        <p class="text-light">
-          Pizzaria artesanal especializada em pepperoni e combos para todas as fomes.
-        </p>
+  <footer class="bg-dark text-light pt-5">
+      <div class="container d-flex flex-wrap justify-content-between gap-4 pb-4 border-bottom border-secondary">
+    
+        <!-- Coluna 1 -->
+        <div class="flex-fill" style="max-width: 300px;">
+          <h3 class="text-warning">Pizzareal</h3>
+          <p class="text-light">
+            Pizzaria artesanal especializada em pepperoni e combos para todas as fomes.
+          </p>
+        </div>
+    
+        <!-- Coluna 2 -->
+        <div class="flex-fill" style="max-width: 200px;">
+          <h4 class="text-warning">Links rápidos</h4>
+          <ul class="list-unstyled">
+            <li><a href="#home" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="#cardapio" class="text-light text-decoration-none">Cardápio</a></li>
+            <li><a href="#promocoes" class="text-light text-decoration-none">Promoções</a></li>
+          </ul>
+        </div>
+    
+        <!-- Coluna 3 -->
+        <div class="flex-fill" style="max-width: 200px;">
+          <h4 class="text-warning">Horários</h4>
+          <p class="mb-1">Dom a Qui: 18h às 23h</p>
+          <p class="mb-1">Sex e Sáb: 18h às 00h</p>
+        </div>
+    
       </div>
-  
-      <!-- Coluna 2 -->
-      <div class="flex-fill" style="max-width: 200px;">
-        <h4 class="text-warning">Links rápidos</h4>
-        <ul class="list-unstyled">
-          <li><a href="#home" class="text-light text-decoration-none">Home</a></li>
-          <li><a href="#cardapio" class="text-light text-decoration-none">Cardápio</a></li>
-          <li><a href="#promocoes" class="text-light text-decoration-none">Promoções</a></li>
-          <li><a href="#sobre" class="text-light text-decoration-none">Sobre nós</a></li>
-        </ul>
+    
+      <!-- Base do rodapé -->
+      <div class="text-center py-3 bg-secondary">
+        <p class="mb-0">&copy; <span id="ano"></span> Pizzareal. Todos os direitos reservados.</p>
       </div>
+    </footer>
   
-      <!-- Coluna 3 -->
-      <div class="flex-fill" style="max-width: 200px;">
-        <h4 class="text-warning">Horários</h4>
-        <p class="mb-1">Dom a Qui: 18h às 23h</p>
-        <p class="mb-1">Sex e Sáb: 18h às 00h</p>
-      </div>
-  
-    </div>
-  
-    <!-- Base do rodapé -->
-    <div class="text-center py-3 bg-secondary">
-      <p class="mb-0">&copy; <span id="ano"></span> Pizzareal. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-  
-
-
     <!-- JavaScript -->
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

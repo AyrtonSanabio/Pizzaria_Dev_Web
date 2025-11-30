@@ -5,19 +5,18 @@
     --text-soft: #e0c9aa;
 }
 
-/* Tipografia e fontes */
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
-/* Ou sobrescreva especificamente as classes do Bootstrap */
+/* Sobrescrevendo algumas das classes do Bootstrap */
 h1.text-warning, h2.text-warning, h3.text-warning, h4.text-warning {
     font-family: 'Georgia', serif;
-    color: var(--cor-paragrafos) !important;
+    /*color: var(--cor-paragrafos) !important;*/
 }
 
-/* Parágrafos */
 p {
     color: var(--cor-neutra);
 }
@@ -29,17 +28,262 @@ p {
 }
 
 
-
-
 /* Formulário */
 form input, form textarea {
     border: 1px solid var(--cor-titulos);
     border-radius: 4px;
     padding: 6px;
 }
+
 form input:focus, form textarea:focus {
     outline: none;
     border-color: #ff4500;
 }
 
+.aviso {
+    cursor: pointer;
+}
 
+#itens-carrinho li {
+    cursor: pointer; 
+}
+
+
+/* ====== Cabeçalho ====== */
+#topo {
+  background: linear-gradient(90deg, #1c1c1c, #2c2c2c);
+  border-bottom: 2px solid #ffc107;
+}
+
+#topo .nav-link {
+  transition: color 0.3s ease;
+}
+
+#topo .nav-link:hover {
+  color: #ffc107;
+}
+
+/* ====== Botões ====== */
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-warning:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255,193,7,0.6);
+}
+
+.btn-outline-warning {
+  border: 2px solid #ffc107;
+  color: #ffc107;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-warning:hover {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+/* ====== Carrinho ====== */
+#painel-carrinho {
+  border: 1px solid #ffc107;
+  border-radius: 8px;
+}
+
+#painel-carrinho h3 {
+  border-bottom: 1px solid #ffc107;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* ====== Hero Section ====== */
+#home {
+  background: linear-gradient(180deg, #1c1c1c, #343a40);
+}
+
+#home h2 {
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+#home p {
+  line-height: 1.6;
+}
+
+/* ====== Promoções ====== */
+#promocoes {
+  border: 2px solid #ffc107;
+  transition: transform 0.3s ease;
+}
+
+#promocoes:hover {
+  transform: scale(1.03);
+}
+
+/* ====== Cards laterais ====== */
+.bg-secondary {
+  background-color: #2c2c2c !important;
+  border-left: 4px solid #ffc107;
+}
+
+/* ====== Cardápio ====== */
+#cardapio h2 {
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+#grade-cardapio article {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#grade-cardapio article:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,193,7,0.4);
+}
+
+/* ====== Contato ====== */
+#contato h2 {
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+#contato form {
+  border: 2px solid #ffc107;
+}
+
+#contato .form-control:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 8px rgba(255,193,7,0.5);
+}
+
+/* ====== Rodapé ====== */
+footer {
+  border-top: 2px solid #ffc107;
+}
+
+footer h3, footer h4 {
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+footer a:hover {
+  color: #ffc107 !important;
+}
+
+footer .bg-secondary {
+  background-color: #1c1c1c !important;
+}
+
+#contato .flex-fill {
+    flex: 0 0 auto;        
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Formulário */
+.formulario-flex {
+  max-width: 500px;
+  margin: auto;
+  background: #2c2c2c;
+  border: 2px solid #ffc107;
+  border-radius: 8px;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+.formulario-flex .linha {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;  
+}
+
+
+.formulario-flex .campo {
+  flex: 1;                   
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.formulario-flex label {
+  font-weight: bold;
+  color: #ffc107;
+  margin-bottom: 5px;
+}
+
+/* Inputs e textarea */
+.formulario-flex input,
+.formulario-flex textarea {
+  background: #1c1c1c;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 6px;
+  color: #fff;
+  font-size: 0.9rem;
+  width: 100%;               
+  box-sizing: border-box;    
+}
+
+.formulario-flex input:focus,
+.formulario-flex textarea:focus {
+  border-color: #ffc107;
+  outline: none;
+  box-shadow: 0 0 6px rgba(255,193,7,0.4);
+}
+
+/* CEP + botão */
+.cep-box {
+  display: flex;
+  gap: 8px;
+  align-items: center;        
+}
+
+#cep {
+  flex: 1;                    
+}
+
+#buscar-cep {
+  background: #ffc107;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  flex-shrink: 0;             
+}
+
+#buscar-cep:hover {
+  background: #e0a800;
+}
+
+/* Botão WhatsApp */
+#botao-contato-whatsapp {
+  width: 100%;
+  background: #ffc107;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#botao-contato-whatsapp:hover {
+  background: #e0a800;
+}
