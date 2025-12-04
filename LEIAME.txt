@@ -1,0 +1,53 @@
+- Título do projeto: Pizzareal
+
+
+-Equipe: 
+- Ayrton Geraldo Pitta Sanabio Filho
+- João Vitor Silva Silvério
+
+-Descrição das funcionalidades
+
+O sistema foi desenvolvido utilizando HTML5, CSS e Bootstrap 5 como framework de estilização.
+O layout responsivo é garantido pelo uso de classes utilitárias do Bootstrap (container, row, col, d-flex, flex-wrap), permitindo adaptação automática a diferentes resoluções de tela.
+O cabeçalho utiliza sticky-top para fixação no topo durante a rolagem e shadow para destaque visual.
+
+
+Módulo de Cardápio
+
+O cardápio é implementado com componentes card do Bootstrap, contendo imagem (card-img-top), título (card-title), descrição (card-text), badge de categoria e botão de ação.
+Cada item possui atributos data-categoria e data-nome/data-preco para integração com o JavaScript.
+O filtro de categorias é realizado via JavaScript, manipulando atributos data-filtro dos botões e exibindo/escondendo elementos conforme a categoria selecionada.
+
+
+Módulo de Carrinho de Compras
+
+O carrinho é implementado com jQuery e manipulação dinâmica do DOM:
+Adição de itens: ao clicar em “Adicionar”, o item é inserido em uma lista (<ul>), o contador é incrementado e o total atualizado.
+Remoção de itens: o usuário pode clicar em um item da lista para removê-lo, com atualização automática do total e contador.
+Limpeza do carrinho: botão que zera lista, contador e total.
+Integração com WhatsApp: ao finalizar, o sistema gera uma URL https://wa.me/ com mensagem formatada contendo itens e total, abrindo diretamente a aplicação de mensagens.
+
+
+Módulo de Contato e Localização
+
+
+Informações fixas: endereço, telefone, e-mail e links para redes sociais.
+Formulário de contato: campos para nome, telefone, CEP, rua, bairro, cidade, estado e mensagem.
+Integração com API ViaCEP: ao inserir o CEP, o sistema realiza requisição assíncrona ($.getJSON) e preenche automaticamente os campos de endereço.
+Validação de dados: o JavaScript verifica obrigatoriedade de campos, formato numérico do telefone e quantidade mínima de dígitos.
+Envio via WhatsApp: os dados são concatenados em uma mensagem e enviados por meio de link wa.me, permitindo comunicação direta com a pizzaria.
+
+Rodapé Institucional
+
+
+O rodapé é dividido em três colunas:
+Identidade da marca: nome e descrição da pizzaria.
+Links rápidos: navegação interna para seções principais.
+Horários de funcionamento: dias e horários de atendimento. A base do rodapé contém aviso de direitos reservados, com ano atualizado dinamicamente via JavaScript.
+
+Considerações Técnicas
+
+O sistema utiliza JavaScript puro para manipulação de filtros e jQuery para carrinho e integração com APIs externas.
+O uso de Bootstrap garante padronização visual, responsividade e redução da necessidade de CSS customizado.
+A integração com WhatsApp e ViaCEP amplia a funcionalidade, proporcionando experiência prática e eficiente ao usuário.
+O design modular permite expansão futura, como inclusão de novos métodos de pagamento ou integração com sistemas de delivery.

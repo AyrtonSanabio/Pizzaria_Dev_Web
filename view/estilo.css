@@ -11,7 +11,7 @@ body {
     line-height: 1.6;
 }
 
-/* Sobrescrevendo algumas das classes do Bootstrap */
+/* Escrevendo por cima de algumas das classes do Bootstrap */
 h1.text-warning, h2.text-warning, h3.text-warning, h4.text-warning {
     font-family: 'Georgia', serif;
     /*color: var(--cor-paragrafos) !important;*/
@@ -21,14 +21,27 @@ p {
     color: var(--cor-neutra);
 }
 
-/* Ícones */
+/* icones */
 .icones {
     width: 30px !important;
     height: 30px !important;
 }
 
 
-/* Formulário */
+
+#enrricco{
+  background: blue;
+  padding: 20px;
+}
+
+.ayrton{
+  background: red;
+  padding: 10px;
+  
+}
+
+
+/* formulario */
 form input, form textarea {
     border: 1px solid var(--cor-titulos);
     border-radius: 4px;
@@ -49,7 +62,7 @@ form input:focus, form textarea:focus {
 }
 
 
-/* ====== Cabeçalho ====== */
+/* ====== cabeçalho ====== */
 #topo {
   background: linear-gradient(90deg, #1c1c1c, #2c2c2c);
   border-bottom: 2px solid #ffc107;
@@ -63,7 +76,7 @@ form input:focus, form textarea:focus {
   color: #ffc107;
 }
 
-/* ====== Botões ====== */
+/* ====== botões ====== */
 .btn-warning {
   background-color: #ffc107;
   border: none;
@@ -86,7 +99,7 @@ form input:focus, form textarea:focus {
   color: #212529;
 }
 
-/* ====== Carrinho ====== */
+/* ====== carrinho ====== */
 #painel-carrinho {
   border: 1px solid #ffc107;
   border-radius: 8px;
@@ -98,7 +111,7 @@ form input:focus, form textarea:focus {
   margin-bottom: 10px;
 }
 
-/* ====== Hero Section ====== */
+/* ====== hero section ====== */
 #home {
   background: linear-gradient(180deg, #1c1c1c, #343a40);
 }
@@ -112,7 +125,7 @@ form input:focus, form textarea:focus {
   line-height: 1.6;
 }
 
-/* ====== Promoções ====== */
+/* ====== promocoes ====== */
 #promocoes {
   border: 2px solid #ffc107;
   transition: transform 0.3s ease;
@@ -122,13 +135,13 @@ form input:focus, form textarea:focus {
   transform: scale(1.03);
 }
 
-/* ====== Cards laterais ====== */
+/* ====== cards laterais ====== */
 .bg-secondary {
   background-color: #2c2c2c !important;
   border-left: 4px solid #ffc107;
 }
 
-/* ====== Cardápio ====== */
+/* ====== cardápio ====== */
 #cardapio h2 {
   font-weight: bold;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
@@ -143,7 +156,15 @@ form input:focus, form textarea:focus {
   box-shadow: 0 0 15px rgba(255,193,7,0.4);
 }
 
-/* ====== Contato ====== */
+.card-img-top {
+  transition: transform 0.6s ease; 
+}
+
+.card-img-top:hover {
+  transform: rotate(25deg); 
+}
+
+/* ====== contato ====== */
 #contato h2 {
   font-weight: bold;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
@@ -177,20 +198,7 @@ footer .bg-secondary {
 
 #contato .flex-fill {
     flex: 0 0 auto;        
-  }
-  
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
   /* Formulário */
